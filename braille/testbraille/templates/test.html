@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+<br/>
+<h5>Braille Testing Attempts</h5>
+<br/>
+<ul>
+{% for t in object_list %}
+    <li><a href="{% url 'test-details' t.pk %}">{{ t.test }}</a> | {{t.date}} <br/>
+    
+
+
+
+{% endfor %}
+    </ul>
+
+    <a class="btn btn-primary mt-2" href="{% url 'add-test' %}"> New Test </a>
+
+{% endblock %}
+</div>

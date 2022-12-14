@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Add Test {% endblock %}
+{% block content %}
+
+<div class="container">
+    <br/>
+    <h3>New Test</h3>
+    <small>Test Details: </small>
+    </br>
+    <br/>
+    <div class ="form-group">
+        <form method ="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <button class="btn btn-primary mt-2" type="submit"> Save </button> 
+        
+
+    </div>
+
+    <br/>
+    <br/>
+  
+<form action="convert">
+    Convert Text:  </br><textarea id="w3review" name="w3review" rows="4" cols="50">Text Here</textarea>
+    <br>
+    <button class="btn btn-primary mt-2" type="submit"> Submit </button> 
+    <br/>
+</form>
+</div>
+
+
+{% endblock %}
